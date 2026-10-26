@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="Coverly, an EPUB cover editor that runs in the browser">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="0.6" stop-color="#132A47"/>
+      <stop offset="1" stop-color="#16304F"/>
+    </linearGradient>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E9F6E"/>
+      <stop offset="1" stop-color="#065F46"/>
+    </linearGradient>
+    <linearGradient id="ghost" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16273F"/>
+      <stop offset="1" stop-color="#101D31"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#10B981" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#8FB6E8" opacity="0.09"/>
+    </pattern>
+    <clipPath id="round">
+      <rect width="1600" height="500" rx="28"/>
+    </clipPath>
+    <clipPath id="coverArt">
+      <rect x="1252" y="110" width="220" height="314" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1600" height="500" fill="url(#bg)"/>
+    <rect x="760" y="0" width="840" height="500" fill="url(#dots)"/>
+    <ellipse cx="1330" cy="330" rx="360" ry="250" fill="url(#glow)"/>
+    <rect x="0" y="0" width="1600" height="4" fill="#047857" opacity="0.85"/>
+
+    <!-- wordmark -->
+    <g transform="translate(96,72) scale(0.1719)">
+      <rect width="512" height="512" rx="112" fill="#1E3A5F"/>
+      <path d="M256 176c-34-24-82-30-122-22-10 2-16 8-16 16v172c0 10 8 16 18 14 36-8 80-2 108 16 4 2 12 2 16 0 28-18 72-24 108-16 10 2 18-4 18-14V170c0-8-6-14-16-16-40-8-88-2-122 22l0 0" fill="none" stroke="#F8FAFC" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+      <line x1="256" y1="176" x2="256" y2="356" stroke="#F8FAFC" stroke-width="14" stroke-linecap="round"/>
+      <rect x="140" y="398" width="232" height="44" rx="22" fill="#047857"/>
+    </g>
+    <text x="232" y="166" font-family="Quicksand, 'Trebuchet MS', sans-serif" font-size="94" font-weight="700" fill="#E6EDF7" letter-spacing="2">Coverly</text>
+    <text x="236" y="212" font-family="Caveat, 'Segoe Script', cursive" font-size="34" fill="#34D399">EPUB cover editor</text>
+    <rect x="100" y="252" width="126" height="10" rx="5" fill="#047857"/>
+    <text x="100" y="316" font-family="Quicksand, 'Trebuchet MS', sans-serif" font-size="27" font-weight="500" fill="#9FB0C7">Add or replace the cover of an EPUB, in your browser.</text>
+    <text x="100" y="352" font-family="Quicksand, 'Trebuchet MS', sans-serif" font-size="21" fill="#8496AF">No upload, no server. The file never leaves your device.</text>
+
+    <!-- feature chips -->
+    <g font-family="Quicksand, 'Trebuchet MS', sans-serif" font-size="20" fill="#C9D8EC">
+      <rect x="100" y="392" width="226" height="46" rx="23" fill="#101D31" stroke="#2C4265"/>
+      <text x="213" y="421" text-anchor="middle">runs in the browser</text>
+      <rect x="346" y="392" width="216" height="46" rx="23" fill="#101D31" stroke="#2C4265"/>
+      <text x="454" y="421" text-anchor="middle">As is / Fit / Fill</text>
+      <rect x="582" y="392" width="212" height="46" rx="23" fill="#101D31" stroke="#2C4265"/>
+      <text x="688" y="421" text-anchor="middle">installable PWA</text>
+    </g>
+
+    <!-- scene: coverless book, Open Library covers, finished book -->
+    <g transform="rotate(-6 1010 280)">
+      <rect x="900" y="122" width="222" height="316" rx="14" fill="#0A101D" opacity="0.55"/>
+      <rect x="894" y="114" width="222" height="316" rx="14" fill="url(#ghost)" stroke="#2C4265" stroke-width="2"/>
+      <rect x="910" y="130" width="190" height="284" rx="8" fill="none" stroke="#10B981" stroke-width="3" stroke-dasharray="11 9" opacity="0.75"/>
+      <g stroke="#33507A" stroke-width="10" stroke-linecap="round">
+        <line x1="952" y1="238" x2="1058" y2="238"/>
+        <line x1="952" y1="272" x2="1058" y2="272" opacity="0.7"/>
+        <line x1="952" y1="306" x2="1022" y2="306" opacity="0.45"/>
+      </g>
+      <circle cx="1005" cy="176" r="17" fill="none" stroke="#33507A" stroke-width="6"/>
+    </g>
+
+    <!-- Open Library cover fan -->
+    <g stroke-linejoin="round">
+      <g transform="rotate(-14 1172 128)">
+        <rect x="1124" y="52" width="96" height="140" rx="8" fill="#9C5C46" stroke="#E4E7EB" stroke-width="3"/>
+        <rect x="1136" y="70" width="72" height="8" rx="4" fill="#F8FAFC" opacity="0.85"/>
+        <rect x="1136" y="86" width="52" height="6" rx="3" fill="#F8FAFC" opacity="0.55"/>
+      </g>
+      <g transform="rotate(-2 1222 118)">
+        <rect x="1176" y="44" width="96" height="140" rx="8" fill="#4C6690" stroke="#E4E7EB" stroke-width="3"/>
+        <rect x="1188" y="62" width="72" height="8" rx="4" fill="#F8FAFC" opacity="0.85"/>
+        <rect x="1188" y="78" width="52" height="6" rx="3" fill="#F8FAFC" opacity="0.55"/>
+      </g>
+      <g transform="rotate(9 1272 128)">
+        <rect x="1228" y="52" width="96" height="140" rx="8" fill="#B98A3C" stroke="#E4E7EB" stroke-width="3"/>
+        <rect x="1240" y="70" width="72" height="8" rx="4" fill="#F8FAFC" opacity="0.85"/>
+        <rect x="1240" y="86" width="52" height="6" rx="3" fill="#F8FAFC" opacity="0.55"/>
+      </g>
+      <text x="1224" y="236" text-anchor="middle" font-family="Quicksand, 'Trebuchet MS', sans-serif" font-size="19" font-weight="600" fill="#8496AF">openlibrary.org</text>
+    </g>
+
+    <!-- arrow into the finished book -->
+    <g stroke="#10B981" stroke-width="8" stroke-linecap="round" fill="none">
+      <line x1="1140" y1="330" x2="1212" y2="330"/>
+      <polyline points="1192,310 1214,330 1192,350"/>
+    </g>
+
+    <!-- finished book with new cover -->
+    <g transform="rotate(4 1362 272)">
+      <rect x="1276" y="134" width="222" height="316" rx="14" fill="#0A101D" opacity="0.55"/>
+      <rect x="1262" y="122" width="220" height="314" rx="12" fill="#E9EEF5"/>
+      <rect x="1252" y="110" width="220" height="314" rx="12" fill="url(#cover)"/>
+      <g clip-path="url(#coverArt)">
+        <rect x="1252" y="110" width="24" height="314" fill="#053F31"/>
+        <circle cx="1398" cy="196" r="30" fill="#F8FAFC" opacity="0.92"/>
+        <path d="M1252 348 L1330 262 L1388 330 L1436 288 L1472 348 L1472 424 L1252 424 Z" fill="#053F31" opacity="0.85"/>
+        <line x1="1296" y1="166" x2="1408" y2="166" stroke="#D1FAE5" stroke-width="11" stroke-linecap="round"/>
+        <line x1="1296" y1="194" x2="1360" y2="194" stroke="#D1FAE5" stroke-width="9" stroke-linecap="round" opacity="0.7"/>
+      </g>
+      <g transform="translate(1436,384)">
+        <circle cx="22" cy="22" r="26" fill="#047857" stroke="#0B1220" stroke-width="5"/>
+        <path d="M10 23 l9 9 l16 -17" fill="none" stroke="#F8FAFC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+</svg>

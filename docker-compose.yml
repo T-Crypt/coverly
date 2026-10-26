@@ -1,0 +1,27 @@
+services:
+  coverly:
+    build: .
+    container_name: coverly
+    ports:
+      # all interfaces: reachable from the LAN by default
+      - "0.0.0.0:8420:8080"
+    restart: unless-stopped
+    # static files only: the container needs nothing writable and no
+    # capabilities at all
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    cap_drop:
+      - ALL
+    # nginx: master starts as root and needs to setuid/setgid the workers
+    # and chown the cache dir; that is the entire privilege requirement
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    mem_limit: 64m

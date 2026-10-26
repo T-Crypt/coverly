@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coverly — EPUB cover editor</title>
+    <meta
+      name="description"
+      content="Add or replace the cover of an EPUB. Pick art from Open Library or upload your own. Everything runs in your browser."
+    />
+    <meta name="theme-color" content="#1E3A5F" />
+    <!-- defense in depth; the authoritative policy is the nginx response
+         header (security-headers.conf) since meta cannot set everything -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://covers.openlibrary.org https://openlibrary.org https://archive.org https://*.archive.org; font-src 'self'; connect-src 'self' https://openlibrary.org https://covers.openlibrary.org https://archive.org https://*.archive.org; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <link rel="icon" href="icons/favicon-64.png" sizes="64x64" type="image/png" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

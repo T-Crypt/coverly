@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dev-dist/
+test/samples/
+test/out/
+
+# local-only: homelab details never enter this repo
+AGENTS.md
+.deploy.env

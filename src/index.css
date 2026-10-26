@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Coverly design system — bookshop navy + emerald on warm paper,
+   from the ui-ux-pro-max minimalism recommendation, tuned for a
+   personal tool. Every surface/ink token has a dark twin. */
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Caveat", "Quicksand", ui-sans-serif, cursive;
+
+  --color-page: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1f3f5;
+  --color-line: #e4e7eb;
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+  --color-faint: #64748b;
+
+  --color-brand: #1e3a5f;
+  --color-brand-hover: #16304f;
+  --color-on-brand: #ffffff;
+  --color-accent: #047857;
+  --color-accent-hover: #065f46;
+  --color-on-accent: #ffffff;
+  --color-danger: #dc2626;
+  --color-danger-soft: #fee2e2;
+  --color-focus: #2563eb;
+
+  --shadow-soft: 0 1px 2px rgb(15 23 42 / 0.04), 0 4px 16px rgb(15 23 42 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(15 23 42 / 0.06), 0 12px 32px rgb(15 23 42 / 0.12);
+}
+
+html.dark {
+  color-scheme: dark;
+  --color-page: #0b1220;
+  --color-surface: #111c2e;
+  --color-surface-2: #182741;
+  --color-line: #263855;
+  --color-ink: #e6edf7;
+  --color-muted: #9fb0c7;
+  --color-faint: #8496af;
+  --color-brand: #4a739e;
+  --color-brand-hover: #5c82ac;
+  --color-on-brand: #ffffff;
+  --color-accent: #059669;
+  --color-accent-hover: #10b981;
+  --color-on-accent: #04220f;
+  --color-danger: #f87171;
+  --color-danger-soft: #451a1a;
+  --color-focus: #7fb0e8;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-page font-sans text-ink antialiased;
+}
+
+/* shared control styles so buttons stay consistent across components */
+@utility card {
+  @apply rounded-2xl border border-line bg-surface shadow-soft;
+}
+
+@utility btn {
+  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl
+    px-4 py-2.5 text-sm font-semibold transition-colors duration-150
+    outline-none focus-visible:outline-2 focus-visible:outline-offset-2
+    focus-visible:outline-focus disabled:pointer-events-none disabled:opacity-50;
+}
+
+@utility btn-primary {
+  @apply btn bg-accent text-on-accent hover:bg-accent-hover;
+}
+
+@utility btn-quiet {
+  @apply btn bg-surface-2 text-ink hover:bg-line;
+}
+
+@utility input-base {
+  @apply w-full rounded-xl border border-line bg-surface px-3.5 py-2.5 text-sm
+    text-ink placeholder:text-faint outline-none transition-shadow
+    focus-visible:outline-2 focus-visible:outline-offset-1
+    focus-visible:outline-focus;
+}
